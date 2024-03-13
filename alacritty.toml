@@ -1,0 +1,54 @@
+[shell]
+program = "/usr/bin/bash"
+args = ["-c", "tmux new-session \\; new-window \\; new-window \\; new-window \\; attach"]
+# args = []
+
+[env]
+WINIT_X11_SCALE_FACTOR = "1.0"
+
+[window]
+dynamic_padding = true
+decorations = "None"
+padding = { x = 3, y = 8 }
+opacity = 1.0
+startup_mode = "Maximized"
+title = ""
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[font]
+normal = { family = "monospace", style = "Regular" }
+
+[colors]
+[colors.primary]
+foreground = "#d8d8d8"
+background = "#182822"
+bright_foreground = "#181818"
+
+[colors.search]
+
+[colors.hints]
+
+[bell]
+# duration = 1000
+
+[selection]
+save_to_clipboard = true
+
+[cursor]
+style = { shape = "Beam", blinking = "Off" }
+
+[terminal]
+
+[mouse]
+hide_when_typing = false
+
+[hints]
+
+[keyboard]
+
+[debug]
+# render_timer = true
+# log_level = "Info"

