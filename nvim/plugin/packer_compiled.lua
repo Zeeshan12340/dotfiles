@@ -99,11 +99,6 @@ _G.packer_plugins = {
     path = "/home/zeeshan/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
-  neovim = {
-    loaded = true,
-    path = "/home/zeeshan/.local/share/nvim/site/pack/packer/start/neovim",
-    url = "https://github.com/rose-pine/neovim"
-  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/home/zeeshan/.local/share/nvim/site/pack/packer/start/nvim-autopairs",

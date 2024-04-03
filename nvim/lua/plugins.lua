@@ -7,7 +7,6 @@ end
 
 return require('packer').startup(function(use)
   use 'github/copilot.vim'
-  use 'rose-pine/neovim'
   use {'neoclide/coc.nvim', branch = 'release'}
   use 'nvim-treesitter/nvim-treesitter-context'
   use 'wbthomason/packer.nvim'
